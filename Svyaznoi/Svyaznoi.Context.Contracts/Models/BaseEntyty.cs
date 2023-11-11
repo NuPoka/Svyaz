@@ -22,7 +22,7 @@ namespace Svyaznoi.Context.Contracts.Models
         /// <summary>
         /// Кем создан
         /// </summary>
-        public string CreatedBy { get; set; }
+        public string CreatedBy { get; set; } = string.Empty;
 
         /// <summary>
         /// Когда изменён

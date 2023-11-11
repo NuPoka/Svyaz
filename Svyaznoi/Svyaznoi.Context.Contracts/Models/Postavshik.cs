@@ -6,7 +6,31 @@ using System.Threading.Tasks;
 
 namespace Svyaznoi.Context.Contracts.Models
 {
-    internal class Postavshik
+    public class Postavshik : BaseEntyty
     {
+        /// <summary>
+        /// Наименование
+        /// </summary>
+        public string Name { get; set; } = string.Empty;
+
+        /// <summary>
+        /// ИНН
+        /// </summary>
+        public int Inn { get; set; }
+
+        /// <summary>
+        /// Индекс
+        /// </summary>
+        public int Index { get; set; }
+
+        /// <summary>
+        /// Адрес
+        /// </summary>
+        public string Adres { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Расчетный счет
+        /// </summary>
+        public int RS { get; set; }
     }
 }
