@@ -22,7 +22,10 @@ namespace Svyaznoi.Context.Contracts.Models
         /// Индекс
         /// </summary>
         public int Index { get; set; }
-
+        /// <summary>
+        /// почта
+        /// </summary>
+        public string Email { get; set; }
         /// <summary>
         /// Адрес
         /// </summary>
