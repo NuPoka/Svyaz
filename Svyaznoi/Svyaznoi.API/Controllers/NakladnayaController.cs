@@ -16,20 +16,23 @@ namespace Svyaznoi.API.Controllers
         {
             this.context1 = context1;
         }
+
         [HttpGet] //localhost:111224/group
         public IActionResult GetAllNakladnaya()
         {
             var nakladnayalist = context1.Nakladnayas.ToList();
             return Ok(nakladnayalist);
         }
-        [HttpGet("{id:Guild}")]
+
+        [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
             var nakladnayalist = context1.Nakladnayas.FirstOrDefault(x => x.Id == id);
             return Ok(nakladnayalist);
         }
+
         [HttpPost]
-        public IActionResult Create(GroupRequestApiModel model)
+        public IActionResult Create(Nakladnaya model)
         {
             var item = new Nakladnaya
             {
@@ -39,9 +42,13 @@ namespace Svyaznoi.API.Controllers
                 CreatedAT = DateTime.Now,
                 CreatedBy = "Я",
                 UpdatedAt = DateTime.Now,
-                UpdatedBy = "Я"
+                UpdatedBy = "Я богатырь!"
             };
+            context1.Nakladnayas.Add(item);
+            context1.SaveChanges();
+            return Ok(item);
         }
+
         [HttpDelete("{id}")] 
         public IActionResult Delete(Guid id) 
         {
@@ -51,6 +58,22 @@ namespace Svyaznoi.API.Controllers
                 context1.Nakladnayas.Remove(group);
             }
             return Ok();
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Edit(Guid Id, Nakladnaya model)
+        {
+         var group = context1.Nakladnayas.FirstOrDefault(x => x.Id == Id);
+            if (group != null) 
+            {
+                return NotFound();
+            }
+            group.Name = model.Name;
+            group.Description = model.Description;
+            group.UpdatedAt = DateTime.Now;
+            context1.SaveChanges();
+
+            return Ok(group);
         }
     }
 }

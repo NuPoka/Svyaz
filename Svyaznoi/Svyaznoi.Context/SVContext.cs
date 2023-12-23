@@ -31,6 +31,13 @@ namespace Svyaznoi.Context
 
         public ICollection<Vedom> Vedoms => vedoms;
 
+      
+
+        void IContext.SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
+
         private void Seed()
         {
             Postavshiks.Add(new Postavshik

@@ -28,5 +28,7 @@ namespace Svyaznoi.Context.Contracts.Models
         /// ведомость
         /// </summary>
         ICollection<Vedom> Vedoms { get; }
+
+        void SaveChanges();
     }
 }

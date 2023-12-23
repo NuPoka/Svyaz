@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=C41412\\SQLEXPRESS\\MSSQLLocalDB;Initial Catalog=IntegrBase_{0};Integrated Security=True;"
+  }
+}

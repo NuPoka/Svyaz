@@ -5,9 +5,9 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Svyaznoi.API", "Svyaznoi.API\Svyaznoi.API.csproj", "{9F82A3DB-C2A0-4B81-BC42-2537990BB8D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svyaznoi.Context", "Svyaznoi.Context\Svyaznoi.Context.csproj", "{17784D7B-9B48-4A0D-8C10-433EA7787547}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Svyaznoi.Context", "Svyaznoi.Context\Svyaznoi.Context.csproj", "{17784D7B-9B48-4A0D-8C10-433EA7787547}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svyaznoi.Context.Contracts", "Svyaznoi.Context.Contracts\Svyaznoi.Context.Contracts.csproj", "{64BBE3C4-C6F3-4D7D-B5EF-8C4F6FDE51C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Svyaznoi.Context.Contracts", "Svyaznoi.Context.Contracts\Svyaznoi.Context.Contracts.csproj", "{64BBE3C4-C6F3-4D7D-B5EF-8C4F6FDE51C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
